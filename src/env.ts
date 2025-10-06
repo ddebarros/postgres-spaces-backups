@@ -16,8 +16,6 @@ export const env = envsafe({
   }),
   DO_SPACES_ENDPOINT: str({
     desc: "DigitalOcean Spaces endpoint URL (e.g., https://nyc3.digitaloceanspaces.com)",
-    default: "",
-    allowEmpty: true,
   }),
   BACKUP_DATABASE_URL: str({
     desc: "The connection string of the database to backup.",
@@ -25,11 +23,6 @@ export const env = envsafe({
   POSTGRES_VERSION: str({
     desc: "PostgreSQL version to install in Docker container (e.g., 16, 15, 14)",
     default: "17",
-  }),
-  DO_SPACES_FORCE_PATH_STYLE: bool({
-    desc: "Use path style for the endpoint instead of the default subdomain style",
-    default: true,
-    allowEmpty: true,
   }),
   BACKUP_FILE_PREFIX: str({
     desc: "Prefix to the file name",
@@ -40,9 +33,8 @@ export const env = envsafe({
     default: "",
     allowEmpty: true,
   }),
-  // This is both time consuming and resource intensive so we leave it disabled by default
   SUPPORT_OBJECT_LOCK: bool({
-    desc: "Enables support for buckets with object lock by providing an MD5 hash with the backup file",
+    desc: "Enables support for buckets with object lock by providing an MD5 hash with the backup file. This is both time consuming and resource intensive so we leave it disabled by default",
     default: false,
   }),
   BACKUP_OPTIONS: str({

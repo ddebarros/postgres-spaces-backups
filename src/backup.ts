@@ -26,7 +26,7 @@ const uploadToSpaces = async ({
 
   const clientOptions: S3ClientConfig = {
     region: "__REGION__",
-    forcePathStyle: env.DO_SPACES_FORCE_PATH_STYLE,
+    forcePathStyle: true,
     credentials: {
       accessKeyId: env.DO_SPACES_ACCESS_KEY_ID,
       secretAccessKey: env.DO_SPACES_SECRET_ACCESS_KEY,
@@ -151,7 +151,7 @@ const dumpToFile = async (filePath: string) => {
 };
 
 const deleteFile = async (path: string) => {
-  console.log("👉 Deleting file...");
+  console.log("👉 Deleting local file...");
   await new Promise((resolve, reject) => {
     unlink(path, (err) => {
       reject({ error: err });
