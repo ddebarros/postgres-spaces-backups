@@ -6,3 +6,10 @@ spec:
     git:
       branch: main
       repo_clone_url: https://github.com/ddebarros/postgres-spaces-backups.git
+    envs:
+      DO_SPACES_ACCESS_KEY_ID: <REQUIRED>
+      DO_SPACES_SECRET_ACCESS_KEY: <REQUIRED>
+      DO_SPACES_BUCKET: <REQUIRED>
+      DO_SPACES_ENDPOINT: <REQUIRED>
+      BACKUP_DATABASE_URL: <REQUIRED>
+      
