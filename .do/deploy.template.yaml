@@ -6,7 +6,7 @@ spec:
     git:
       branch: main
       repo_clone_url: https://github.com/ddebarros/postgres-spaces-backups.git
-    type: SCHEDULED
+    kind: SCHEDULED
     schedule:
       cron: 0 /60 * * *
     envs:
