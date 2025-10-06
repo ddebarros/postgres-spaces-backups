@@ -3,6 +3,6 @@ spec:
   jobs:
   - name: postgres-spaces-backup
     dockerfile_path: Dockerfile
-    github:
+    git:
       branch: main
-      repo_clone_url: https://github.com/ddebarros/postgres-spaces-backups
+      repo_clone_url: https://github.com/ddebarros/postgres-spaces-backups.git
