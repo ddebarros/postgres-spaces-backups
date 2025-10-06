@@ -8,7 +8,7 @@ spec:
       repo_clone_url: https://github.com/ddebarros/postgres-spaces-backups.git
     kind: SCHEDULED
     schedule:
-      cron: 0 /60 * * *
+      cron: 0/60 * * * *
     envs:
       - key: DO_SPACES_ACCESS_KEY_ID
         value: <REQUIRED>
